@@ -1,0 +1,13 @@
+select `zipkin`.`zipkin_spans`.`name` from `zipkin`.`zipkin_spans` where (notEmpty(`zipkin`.`zipkin_spans`.`name`) and `zipkin`.`zipkin_spans`.`local_service_name` = 'testService');
+> name
+> ---------
+> testName1
+> testName2
+@ rows: 2
+
+select distinct `zipkin`.`zipkin_spans`.`local_service_name` from `zipkin`.`zipkin_spans` where notEmpty(`zipkin`.`zipkin_spans`.`local_service_name`) order by `zipkin`.`zipkin_spans`.`local_service_name`;
+> local_service_name
+> ----------------
+> testServiceName1
+> testServiceName2
+@ rows: 2
