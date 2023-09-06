@@ -20,6 +20,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.github.guronas</groupId>
     <artifactId>zipkin-storage-clickhouse</artifactId>
+    <packaging>jar</packaging>
     <version>2.23.16</version>
     <name>zipkin-storage-clickhouse</name>
     <description>Clickhouse storage for Zipkin</description>
